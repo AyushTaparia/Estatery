@@ -1,0 +1,207 @@
+/* desktop view */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans:wght@300;400&display=swap');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+*/
+:root{
+  --base:rgb(113, 62, 243);
+}
+*{
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+/* Styling Container */
+.container{
+  overflow-y: hidden;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+/* Styling Landing */
+.landing{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 13vh;
+  width:80%;
+  font-size: 2.2em;
+  font-weight: 650;
+  color: black;
+  padding-top: 40px;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.dropdown-container{
+  width: 220px;
+}
+
+.searchtext{
+  font-size: 12px;
+}
+
+.imageDiv{
+  background-position: center;
+  background-size: cover;
+  border: rgba(113, 62, 243, 0.721) 2px solid;
+  box-shadow: 2px 2px 12px rgb(35,35,35,0.8);
+  width:70vh;
+  height: 60vh;
+  transform:rotate(10deg);
+  transition:transform 01s;
+}
+.imageDiv.darkTheme{
+  box-shadow: 2px 2px 30px rgb(0,0,0);
+}
+.imageDiv:hover{
+  transition:transform 01s;
+  transform:rotate(0deg);
+}
+.searchResult {
+  border-radius: 12px;
+  padding:32px 0px;
+  margin: 35px;
+  width:85vw;
+  box-shadow:0px 0px 15px rgb(35,35,35,0.1);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.filter{
+  margin-top:35px;
+  box-shadow:0px 0px 15px rgb(35,35,35,0.1);
+  width: 85vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  justify-content: space-evenly;
+  padding:16px 0px;
+}
+
+/* navbar */
+.navBar{
+  width:100vw;
+  height: 7vh;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.navBar .company{
+  margin-left:35px;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  font-weight: 600;
+  font-size:1.2em;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.sign_nav{
+  margin-right: 35px;
+}
+
+.Rent_nav{
+  margin-left: 50px;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-weight: 500;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+
+.Resources_nav, .Manage_nav{
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  
+  /* font-weight: bold; */
+}
+
+.login_nav{
+  margin-right: -580px;
+}
+.log_button{
+  outline: none;
+  padding: 8px 12px;
+  background-color:white;
+  border-radius: 0.5rem;
+  color: rgba(113, 62, 243, 0.721);
+  font-weight: bolder;
+  border-width: 0.1px;
+  border-color: rgba(113, 62, 243, 0.721);
+  cursor: pointer;
+
+
+}
+.signup_button{
+  border: none;
+  outline: none;
+  padding: 8px;
+  background-color: rgba(113, 62, 243, 0.721);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.search_button{
+  border: none;
+  outline: none;
+  padding: 5px 50px 5px 50px;
+  background-color: rgba(113, 62, 243, 0.721);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.landingText{
+  max-width: 60%;
+}
+
+/* navbar */
+/*mobile view */
+@media only screen and (max-width: 600px){
+  .searchResult,.filter{
+    width:95vw;
+  }
+  .imageDiv{
+    display: none;
+  }
+  .landing{
+    font-size: 2.3em;
+  }
+  .landingText{
+    line-height: 1.8em;
+    text-align: center;
+    max-width: 100%;
+  }
+  .filterOpts{
+    margin-bottom: 15px;
+  }
+}
